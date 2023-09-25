@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            /*Ao Definir O displey em flex deixamos de dar identidade para cada filho para tornar os filhos em UM unico alinhamento que sera em colunas e linhas horizontais, que sao definidas no conteiner pai.*/
+            /*Temos que definir a altura antes de usar o alinhamente vertical align-itens e horizontal justify content*/
+            display: flex; 
+            height: 100vh;
+            flex-direction: row;
+            /*Os dois alinhadores tem flex- e flex- e center*/
+            justify-content: space-between; /*Horizontal*/
+            /*O justify contente pode separar itens entre si usado space-between ou space around*/
+            align-items: center; /*Vertical*/
+        }
+        div.chield{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: rgb(109, 58, 130);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chield"></div>
+        <div class="chield"></div>
+        <div class="chield"></div>
+        <div class="chield"></div>
+    </div>
+</body>
+</html>
