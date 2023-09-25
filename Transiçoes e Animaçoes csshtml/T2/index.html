@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(91, 96, 101);
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 1.2em;
+        }
+        section{
+            display: flex;
+            flex-direction: row;
+        }
+        div{
+            display: flex;
+            align-items: center; /*Alinha VERTICALMENTE os intens*/
+            justify-content: center;/*No caso DE DISPLEY flex devemos usar Justify content center inves de text alight center.*/
+            margin: 3px;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .green{
+            background-color: green;
+        }
+        .red{
+            background-color: red;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+        }
+        .spiner{
+            border-radius: 50%;
+            margin-left: 30px;
+        }
+        .animationfadein{
+        /* Ordem de animation
+          1- Nome Qualquer. Referencia aos keyframes
+          2- Tempo de transiçao.
+          3- Tempo de aceleraçao ou nao.
+          4- quantas vezes a animaçao vai ser passada.
+         */
+            animation: fadein 2s linear;
+        }
+        @keyframes fadein{ /*Configuraçoes para animaçoes*/
+            /*opacity = opcaidade em 0 transparente para 1 visivel*/
+            from{opacity: 0} /*De começa*/
+            to{opacity: 1;} /*De onde termina*/
+        }
+        .animationfadeout{
+            animation: fadein 1s linear; /*Pegamos empretado o nome que referencia a keyframes do animationfadein e invertemos a animaçao que ia de from para to indo agora de to para from*/
+            animation-direction: reverse; /*reverte a ordem de animaçao padrao que esta em keyframes fromto para tofrom*/
+            animation-fill-mode: forwards; /*Pega as configuraçoes finais do keyframe e as aplica ao elemento*/
+        }
+        .animationfadeinfadeout{
+            animation: fadeinfadeout 2s linear infinite; /*infinite repitindo infinitamente*/
+        }
+        @keyframes fadeinfadeout{
+            0%{opacity: 1} /*0% Vai representar o tempo*/
+            50%{opacity: 0.2} /*50% de 2segundos é 1 segundo*/
+            100%{opacity: 1}
+        }
+        .animationspiner{
+            animation: rotate 2s linear infinite;
+        }
+        .animationspinerease{
+            animation: rotate 2s ease infinite;
+        }
+        .animationspinereaseout{
+            animation: rotate 2s ease-out infinite;
+        }
+        @keyframes rotate{
+            from{transform: rotateZ(0deg)}
+            to{transform: rotateZ(360deg)}
+        }
+        .positionbox{
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-color: #444;
+        }
+        .animationposition{
+            position: absolute;
+            animation: positions 4s linear infinite;
+            animation-direction: alternate;
+        }
+        @keyframes positions{
+            /* nao pode acrecentar mais coisas na segunda(a) porcentagem
+            que a primeira*/
+            0%{
+                top: 0;
+                left: 0;
+            }
+            /*Dentro de cada calc deve ter um epaço do sinal de - aos dois valores*/
+            33%{
+                top: 0;
+                left: calc(100% - 100px); /*100% para o lado menos 100px*/
+            }
+            50%{
+                top: calc(100% - 100px);
+                left: calc(100% - 100px);
+            }
+            80%{
+                top: calc(100% - 100px);
+                left: 0;
+            }
+            100%{
+                top: 0;
+                left: 0;
+            }
+        }
+        .item:hover{
+            animation-play-state: paused; /*pausa a animaçao tbm tem a opçao de runnig*/
+        }
+        .animationcontent::after{
+            content:''; /*Precisamos dar um valor para content para funcionar*/
+            animation: promocao 2s linear infinite; /*parm de animaçao*/
+        }
+        @keyframes promocao{
+            0%{content: 'Promocao'}
+            50%{content: ''}
+            60%{content: 'Frete gratis'}
+        }
+    </style>
+</head>
+<body>
+    <h1>Animaçoes</h1>
+    <h2></h2>
+    <section>
+        <!--Voce pode aplicar duas classes num mesmo elemnento usando somente o espaço no caso 'blue item' aplicamos duas classes.-->
+        <div class="blue item animationfadein" >Blue</div>
+        <div class="green item animationfadeout" >Green</div>
+        <div class="red item animationfadeinfadeout" >Red</div>
+    </section>
+    <hr>
+    <h2>spinners</h2>
+    <section>
+        <div class="item blue spiner animationspiner">Linear</div>
+        <div class="item blue spiner animationspinerease">Ease</div>
+        <div class="item blue spiner animationspinereaseout">EaseOut</div>
+    </section>
+    <hr>
+    <h2>Position</h2>
+    <section class="positionbox">
+        <div class="item yellow animationposition"></div>
+    </section>
+    <hr>
+    <h2>Content</h2>
+    <section>
+        <div class="red item animationcontent"></div>
+    </section>
+</body>
+</html>

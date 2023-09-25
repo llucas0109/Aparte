@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    .container{
+        display: flex;
+        width: 300px;
+        height: 300px;
+        position: relative;
+    }
+    .horas{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        animation: girarponteiro 60s linear infinite;
+    }
+    .minutos{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        animation: girarponteiro 5s linear infinite;
+    }
+    @keyframes girarponteiro{
+        from{transform: rotateZ(0deg)}
+        to{transform: rotateZ(360deg)}
+
+    }
+    </style>
+</head>
+<body>
+   <h1>Relogio</h1>
+   <div class="container">
+    <img src="imagens/clock.svg" alt="Relogio" class="relogio">
+    <img src="imagens/hour.svg" alt="" class="horas">
+    <img src="imagens/minute.svg" alt="" class="minutos">
+   </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(91, 96, 101);
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 1.2em;
+        }
+        section{
+            display: flex;
+            flex-direction: row;
+        }
+        div{
+            display: flex;
+            align-items: center; /*Alinha VERTICALMENTE os intens*/
+            justify-content: center;/*No caso DE DISPLEY flex devemos usar Justify content center inves de text alight center.*/
+            margin: 3px;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .green{
+            background-color: green;
+        }
+        .red{
+            background-color: red;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+        }
+        .transitionbackground:hover{
+            background-color: red;
+        }
+        .transitionbackground{
+            transition: background-color 1s; /*Colocaos o nome do que exatamente queremos fazer uma transiçao ele vai fazer so em numeros. E Colocamos o nome pq ajuda na depuraçao*/
+        }
+        .transitionsize{
+            transition: transform 0.3s; /*Colocamos o nome do que vai ser aplicado uma transiçao assim como se fosse um background 1s*/
+        }
+        .transitionsize:hover{
+            transform: scale(1.5);/*transform que foi aplicado 1segundo configura scale ou seja escala de 1.5 ou seja almenta a escala em todos os lados em 1.5*/
+        }
+        .transitionrotate{
+            transition: transform 0.2s;
+        }
+        .transitionrotate:hover{
+            transform: rotateZ(180deg); /*ROTACIONa em 180 GRAUS'deg'*/
+        }
+        .transitiondelay{
+            /*Podemos passar tempos diferentes*/
+           transition: width 1s 1s, height 1s; /*Passamos a propriedade a ser aplicado transition */ 
+           /*Para por delay ou seja espere basta colocar mais um valor a apos o de transiçao*/
+        }
+        .transitiondelay:hover{
+            width: 200px;
+            height: 200px;
+        }
+        .transitioncheckbox{
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s;
+        }
+        .transitioncheckbox:checked{
+            transform: rotatey(360deg);
+        }
+        .transitionradio{
+            width: 50px;
+            height: 50px;
+            transition: transform 1s; /*Passamos no elemento o transition e somente depois la no momento de ativar a interaçao*/
+        }
+        .transitionradio:checked{
+            transform:  scale(1.4);
+        }
+        .transitiontext{
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #fff;
+            color: black;
+            transition: transform 1s;
+        }
+        .transitiontext:focus{
+            transform: scaleY(0.5) scaleX(0.7) rotateZ(10deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>Transiçoes</h1>
+    <h2>hover</h2>
+    <section>
+        <!--Voce pode aplicar duas classes num mesmo elemnento usando somente o espaço no caso 'blue item' aplicamos duas classes.-->
+        <div class="blue item transitionbackground" >Blue</div>
+        <div class="yellow item transitionbackground" >yellow</div>
+        <div class="green item transitionsize">green</div>
+        <div class="red item transitionrotate">Red</div>
+    </section>
+    <hr> <!--hr Cria uma linha simples na pagina-->
+    <h2>Transition Delay</h2>
+    <div class="red item transitiondelay">Red</div>
+    <hr> <!--hr Cria uma linha simples na pagina-->
+    <h2>Checked</h2>
+    <section>
+        <input type="checkbox" class="transitioncheckbox">
+        <input type="radio" class="transitionradio">
+        <input type="radio" class="transitionradio">
+    </section>
+    <hr>
+    <h2>Focus</h2>
+    <section>
+        <input type="text" class="transitiontext">
+    </section>
+</body>
+</html>
