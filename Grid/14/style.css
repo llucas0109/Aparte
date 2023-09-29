@@ -1,0 +1,24 @@
+.grid{
+    display: grid;
+    grid-template-columns: [state-start] repeat(5,200px); [state-end]/*Declaramos com [nome qualquer] a primeira grid edepois de repeat outro [nme qualquer] que declara a ultima grid caso se depois de tudo divermos um 1frpor exemplo o state-endnao sera mais o ultimo .Podemos por quantos nomes quisermos[]*/
+    column-gap: 10px; 
+    row-gap: 10px; 
+    grid-auto-rows: 200px; /*a quantidade de row linhas sera automatica ou seja se almentar para baixo ele almenta*/
+}
+.grid > *{ /*AQuI Olha quando colocamos * significa qualquer elemento */
+    background-color: #22b5ef;
+    padding: 20px;
+}
+header{
+    grid-column: state-start/state-end; /*da primeira a ultima grid*/
+}
+main{
+    grid-column: state; /*Se no nome definido em [] no grid-template-colum estiver com ##-@@ podemos usar somente ## */
+}
+aside{
+}
+footer{
+}
+.grid > *:nth-child(even){ /*nth-child(even) da cor em ordem par ou seja cria listas*/
+    background-color: #bdefad;
+}

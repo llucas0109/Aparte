@@ -45,7 +45,7 @@
         /* Ordem de animation
           1- Nome Qualquer. Referencia aos keyframes
           2- Tempo de transiçao.
-          3- Tempo de aceleraçao ou nao.
+          3- Tempo de aceleraçao ou nao ou suavilizaçao.
           4- quantas vezes a animaçao vai ser passada.
          */
             animation: fadein 2s linear;
@@ -129,6 +129,18 @@
             50%{content: ''}
             60%{content: 'Frete gratis'}
         }
+        #dd{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(130, 128, 128);
+        }
+        .visivel{
+            background-color: red;
+            transition: transform 1s;          
+        }
+        .visivel:hover{
+            transform: translateY(50px);
+        }
     </style>
 </head>
 <body>
@@ -156,6 +168,10 @@
     <h2>Content</h2>
     <section>
         <div class="red item animationcontent"></div>
+    </section>
+    <hr>
+    <section id="dd">
+        <div class="red  item visivel"></div>
     </section>
 </body>
 </html>

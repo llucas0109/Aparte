@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        section{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('bing_wallpaper_JohnstonCanyon_1920x1080.jpg');
+            background-size: cover;
+            background-attachment: fixed; /*Impede que a imagem role junto*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: circle(180vh at 50% -80vh);
+        }
+        section#content{
+            max-width: 1000px;
+            text-align: center;
+        }
+        section #content h2{
+            font-size: 2em;
+            color: #fff;
+
+        }
+        body{
+            min-height: 150vh; 
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div id="content">
+            <h2>retangulo</h2>
+        </div>
+    </section>
+</body>
+</html>

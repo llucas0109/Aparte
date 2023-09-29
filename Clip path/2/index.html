@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recorte de imagens e elementos</title>
+    <style>
+        section{
+            display: flex;
+            flex-direction: row;
+        }
+        #elemento{
+            width: 300px;
+            height: 300px;
+        }
+        img{
+            width: 400px; 
+            height: 400px;
+            clip-path: url(#svgpath);
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div >
+            <img src="bing_wallpaper_JohnstonCanyon_1920x1080.jpg" alt="" >
+        </div>
+        <div id="elemento">
+            <!--De um modo geral path seria  regras de escreta e coordenadas que crian desenhos-->
+            <clipPath id="svgpath">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.877075 7.49991C0.877075 3.84222 3.84222 0.877075 7.49991 0.877075C11.1576 0.877075 14.1227 3.84222 14.1227 7.49991C14.1227 11.1576 11.1576 14.1227 7.49991 14.1227C3.84222 14.1227 0.877075 11.1576 0.877075 7.49991ZM7.49991 1.82708C4.36689 1.82708 1.82708 4.36689 1.82708 7.49991C1.82708 10.6329 4.36689 13.1727 7.49991 13.1727C10.6329 13.1727 13.1727 10.6329 13.1727 7.49991C13.1727 4.36689 10.6329 1.82708 7.49991 1.82708Z"
+                      fill="#000000"
+                    />
+            </clipPath>
+        </div>
+    </section>
+</body>
+</html>

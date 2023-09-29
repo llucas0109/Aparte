@@ -1,0 +1,17 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,100px) 200px; /*repeat= repita 3 vezes 100px e a ultima coluna 200px*/ 
+    column-gap: 10px; /*colum-gap Da o espaçamente ENTRE COLUNAS*/
+    row-gap: 10px; /*espaçamento entre linhas gap*/
+    grid-template-rows: repeat(1,100px); /*Da o numero de linhas um valor determina uma linha*/
+    /*Caso ocorra de termos mais conteiers do que definimos  com grid-template-colum e grid-template-row ainda sim esses conteiners apareceram mas nao estaram configurados da mesma maneira se estivesse dentro da grade*/
+    /*Existe uma maneira de dar configuraçoes a conteiners fora da graade grid ELA se chama grid-auto-rows*/
+    grid-auto-rows: 150px; /*Da configuraçao de tamanho e quantidade a containers fora da grade*/
+}
+.grid > div{
+    background-color: #22b5ef;
+    padding: 20px;
+}
+.grid > div:nth-child(even){ /*nth-child(even) da cor em ordem par ou seja cria listas*/
+    background-color: #bdefad;
+}

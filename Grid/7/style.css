@@ -1,0 +1,20 @@
+.grid{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px; /*A primeira coluna com valor minimo de 200px e maximo de 400px e o resto com 200px*/
+    column-gap: 10px; 
+    row-gap: 10px; 
+    grid-template-rows: repeat(2,100px); 
+    height: 100vh;
+}
+.grid > div{
+    background-color: #22b5ef;
+    padding: 20px;
+}
+.grid > div:nth-child(1){ /*Selecionamos a div filha numero 1 na ordem*/
+    /*no grid-colum tbm existe o 1 / -1 que faz a div seleciona ocupar todo espaço disponivel*/
+    grid-column: 1/3; /*Expande o tamanho que a div ocupa da posiçao 1 para ate a 3. Podemos mudar a posiçao da div no grid usando grid-collum basta colocar 2/4 por exemplo para sair da colum 1 ir para colum 2e expandir ate 4 caso nao queira expandir basta colocar grid-collum e a posiçao que deseja movimentar a div  LEMBRANDo que é para filhos de grid.*/
+
+}
+.grid > div:nth-child(even){ /*nth-child(even) da cor em ordem par ou seja cria listas*/
+    background-color: #bdefad;
+}

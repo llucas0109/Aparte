@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            margin: 0%;
+            background-color: #000;
+            color:#fff;
+            font-family: Arial, Helvetica, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        section{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            min-height: 400px;
+            padding: 100px 20vw;
+        }
+        .red{
+            background-color: rgb(120, 17, 17);
+        }
+        .blue{
+            background-color: rgb(39, 91, 188);
+        }
+        .gren{
+            background-color: rgb(80, 56, 68);
+        }
+        .curve{
+            position: absolute;
+            height: 225px;
+            width: 100%;
+            bottom: 0; /*Faz quase a mesma coisa que o top*/
+        }
+        .curve::before{
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%; /*O segundo valor de border radius ajusta a somente a ponta da curva*/
+            width: 63%;
+            height: 100%;
+            background-color: #000;
+            transform: translate(44%,57%);
+                }
+        .curve::after{
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%; /*O segundo valor de border radius ajusta a somente a ponta da curva*/
+            width: 55%;
+            height: 100%;
+            background-color: rgb(39, 91, 188);
+            transform: translate(-39%, 40%);
+            z-index: -1;
+        }
+        section{
+            border-radius: 10;
+        }
+    </style>
+</head>
+<body>
+    <section class="blue">
+        <h1>Nice curves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam fuga! Minima obcaecati non itaque! Provident modi voluptatum repellendus, delectus itaque odio quia repellat iusto quaerat tempora magnam aut impedit.</p>
+        <div class="curve"></div>
+    </section>
+    <section>
+        <h1>Nice curves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam fuga! Minima obcaecati non itaque! Provident modi voluptatum repellendus, delectus itaque odio quia repellat iusto quaerat tempora magnam aut impedit.</p>
+    </section>
+    <section>
+        <h1>Nice curves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam fuga! Minima obcaecati non itaque! Provident modi voluptatum repellendus, delectus itaque odio quia repellat iusto quaerat tempora magnam aut impedit.</p>
+    </section>
+    <section>
+        <h1>Nice curves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam fuga! Minima obcaecati non itaque! Provident modi voluptatum repellendus, delectus itaque odio quia repellat iusto quaerat tempora magnam aut impedit.</p>
+    </section>
+    <section>
+        <h1>Nice curves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam fuga! Minima obcaecati non itaque! Provident modi voluptatum repellendus, delectus itaque odio quia repellat iusto quaerat tempora magnam aut impedit.</p>
+    </section>
+    <section>
+        <h1>Nice curves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam fuga! Minima obcaecati non itaque! Provident modi voluptatum repellendus, delectus itaque odio quia repellat iusto quaerat tempora magnam aut impedit.</p>
+    </section>
+    <section>
+        <h1>Nice curves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam fuga! Minima obcaecati non itaque! Provident modi voluptatum repellendus, delectus itaque odio quia repellat iusto quaerat tempora magnam aut impedit.</p>
+    </section>
+    <section>
+        <h1>Nice curves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam fuga! Minima obcaecati non itaque! Provident modi voluptatum repellendus, delectus itaque odio quia repellat iusto quaerat tempora magnam aut impedit.</p>
+    </section>
+</body>
+</html>

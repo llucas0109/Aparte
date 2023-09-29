@@ -1,0 +1,14 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /* 1fr define uma coluna com 3 1fr teriamos Cada coluna tera o mesmo tamanho fr = Fracionamento */
+    column-gap: 10px; 
+    row-gap: 10px; 
+    grid-template-rows: repeat(2,1fr); 
+}
+.grid > div{
+    background-color: #22b5ef;
+    padding: 20px;
+}
+.grid > div:nth-child(even){ /*nth-child(even) da cor em ordem par ou seja cria listas*/
+    background-color: #bdefad;
+}

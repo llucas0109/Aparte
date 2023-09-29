@@ -1,0 +1,31 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,100px); /*auto-fill preenche ate o o maximo da viewport de grid TEMOS tbm o grid auto-fit que preenche somente onde tiver grid*/
+    column-gap: 10px; 
+    row-gap: 10px; 
+    grid-auto-rows: 200px; /*a quantidade de row linhas sera automatica ou seja se almentar para baixo ele almenta*/
+    grid-template-areas:  /*Determina onde iram ficar os containers dentro do grid*/
+    "header header header footer"
+    "main main main footer"
+    "aside aside aside aside"
+    ;
+}
+.grid > *{ /*AQuI Olha quando colocamos * significa qualquer elemento */
+    background-color: #22b5ef;
+    padding: 20px;
+}
+header{
+    grid-area: header; /*Define o nome para ser usado depois no grid-tamplets-area*/
+}
+main{
+    grid-area: main; /*Define o nome paraser usado depois em grid tamplate-area*/
+}
+aside{
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}
+.grid > *:nth-child(even){ /*nth-child(even) da cor em ordem par ou seja cria listas*/
+    background-color: #bdefad;
+}

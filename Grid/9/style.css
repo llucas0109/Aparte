@@ -1,0 +1,21 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5,200px); /*repida em colas de 200px 5 vezes*/
+    column-gap: 10px; 
+    row-gap: 10px; 
+    grid-template-rows: repeat(2, minmax(200px,auto)); /*minmax Tem dois paramentro o Primeiro O minimo de tamanho da linha  e o max no caso deixamo livre usando auto*/
+}
+.grid > div{
+    background-color: #22b5ef;
+    padding: 20px;
+}
+.grid > div:nth-child(1){ 
+    grid-column: 1/-1; 
+    height: 300px; /*Podemos Modificar Elementos que estao dentro dos grid*/
+}
+.grid > div:nth-child(3){ 
+    grid-column: 2/5; 
+}
+.grid > div:nth-child(even){ /*nth-child(even) da cor em ordem par ou seja cria listas*/
+    background-color: #bdefad;
+}

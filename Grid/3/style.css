@@ -1,0 +1,14 @@
+.grid{
+    display: grid;
+    grid-template-columns: minmax(200px, 400px) 200px 200px; /*A primeira coluna com valor minimo de 200px e maximo de 400px e o resto com 200px*/
+    column-gap: 10px; 
+    row-gap: 10px; 
+    grid-template-rows: repeat(1,100px); 
+}
+.grid > div{
+    background-color: #22b5ef;
+    padding: 20px;
+}
+.grid > div:nth-child(even){ /*nth-child(even) da cor em ordem par ou seja cria listas*/
+    background-color: #bdefad;
+}

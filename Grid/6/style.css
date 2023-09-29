@@ -1,0 +1,20 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /*A primeira coluna com valor minimo de 200px e maximo de 400px e o resto com 200px*/
+    column-gap: 10px; 
+    row-gap: 10px; 
+    grid-template-rows: repeat(3,1fr);
+    /*O alinhamentoas colunas e linha e feito com justify-contente e alight-items  end center start*/
+    height: 100vh;
+}
+.grid > div:nth-child(2){ /* SELECIONAMOS A DIV 2 filha!!*/
+    align-self: start; /*end start center align-self alinha elementos cima baixo que estao dentro da grid*/
+    justify-self: end; /*Alinha os elementos horizontamente justify-self que estao dentro da grid*/
+}
+.grid > div{
+    background-color: #22b5ef;
+    padding: 20px;
+}
+.grid > div:nth-child(even){ /*nth-child(even) da cor em ordem par ou seja cria listas*/
+    background-color: #bdefad;
+}

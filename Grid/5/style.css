@@ -1,0 +1,17 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,200px); /*A primeira coluna com valor minimo de 200px e maximo de 400px e o resto com 200px*/
+    column-gap: 10px; 
+    row-gap: 10px; 
+    grid-template-rows: repeat(3,200px); 
+    /*O alinhamentoas colunas e linha e feito com justify-contente e alight-items */
+    justify-content: center;
+    align-items: center;
+}
+.grid > div{
+    background-color: #22b5ef;
+    padding: 20px;
+}
+.grid > div:nth-child(even){ /*nth-child(even) da cor em ordem par ou seja cria listas*/
+    background-color: #bdefad;
+}

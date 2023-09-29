@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recorte de imagens e elementos</title>
+    <style>
+        section{
+            display: flex;
+            flex-direction: row;
+        }
+        img{
+            clip-path: ellipse(66% 23% at 49% 13%); /*clip path recorta a imagem deformas custumizadas. ou mais padrois como cicle e polygon.*/
+        }
+        img2{
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        /*https://bennettfeely.com/clippy/  Site de costumizaçao de clip path de imagens*/
+        #elemento{
+            clip-path: ellipse(66% 23% at 49% 13%);
+            width: 300px;
+            height: 300px;
+            margin-left: 3px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div >
+            <img src="imagens/bing_wallpaper_XmasTreeRoad_1920x1080.jpg" alt="" style="width: 500px; height: 400px;">
+        </div>
+        <div >
+            <img src="imagens/bing_wallpaper_XmasTreeRoad_1920x1080.jpg" alt="" style="width: 500px; height: 400px;" id="img2">
+        </div>
+        <div id="elemento">
+            elemento
+        </div>
+    </section>
+</body>
+</html>
