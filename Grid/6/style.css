@@ -7,7 +7,7 @@
     /*O alinhamentoas colunas e linha e feito com justify-contente e alight-items  end center start*/
     height: 100vh;
 }
-.grid > div:nth-child(2){ /* SELECIONAMOS A DIV 2 filha!!*/
+.grid > div:nth-child(2){ /* SELECIONAMOS A DIV 2 filha!! */
     align-self: start; /*end start center align-self alinha elementos cima baixo que estao dentro da grid*/
     justify-self: end; /*Alinha os elementos horizontamente justify-self que estao dentro da grid*/
 }
