@@ -1,0 +1,12 @@
+.contador{
+  min-width: 300px; /*Caso A Width dos filhos espanda ele espandira junto por isso min width ele fica em 300 mas pode ir mais ...*/
+  height: 300px;
+  display: flex;
+  color: white;
+  padding: 25px;
+  font-size: 160px;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid #fff;
+  margin-bottom: 15px;
+}
