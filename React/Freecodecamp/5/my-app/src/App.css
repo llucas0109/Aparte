@@ -1,0 +1,36 @@
+/*App.css aplicamos estilos gerais do apliacativo*/
+/*Em css normalmente usamos dois espaços*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/*Se nos aplicamos estilode body ao app.js o app.js  Que enviara para index.js Que aplica os estilos no documento 'index.html'  isso configurara o body normalmente*/
+html,
+body{ 
+  font-size: 18px;
+  background-color: #f5f6f7;
+}
+h1{
+  max-width: 940px;
+  font-size: 2.5em;
+  font-family: Lato,sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 40px 0px;
+}
+.App{
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap; /*Caso a tela se esprema os elementos filhos pulam para proxima linha*/
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contenedor-principal{
+  min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

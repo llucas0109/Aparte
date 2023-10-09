@@ -1,0 +1,19 @@
+.Boton-clear{
+    font-size: 1.6em;
+    height: 80px;
+    display: flex;
+    flex: 1; /*Anula altura do boton*/
+    background-color: #ac0246;
+    margin-top: 8px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+    border-radius: 45px;
+    user-select: none; /*USUARIO nao consiguira selecionar objeto*/
+}
+.Boton-clear:hover{
+    background-color: #ebb000;
+}
