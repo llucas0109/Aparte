@@ -16,30 +16,29 @@
             display: flex; 
             height: 100vh;
               /*Existe o eixo principal e o eixo segundario. Todo alinhamento depende do eixo principal*/
-            flex-direction: column; /*Aqui o eixo principal e de column entao se eu aplicar justfy-content: end; teremos o alinhamento no final da pagina, CASO quizesemos fazer a mesma coisa (alinha no final da pagina ) com o flex-direction: row ; teriamos que usar align-itens end */
+            flex-direction: row; /*Aqui o eixo principal e de column entao se eu aplicar justfy-content: end; teremos o alinhamento no final da pagina, CASO quizesemos fazer a mesma coisa (alinha no final da pagina ) com o flex-direction: row ; teriamos que usar align-itens end */
             /*Os dois alinhadores tem flex- e flex- e center*/
-            justify-content: end; /*Ainha no eixo principal*/
+            justify-content: center; /*Ainha no eixo principal*/
             /*O justify contente pode separar itens entre si usado space-between ou space around*/
-            align-items: center; /*Alinha no eixo segundario*/
-            /*align-itens: stretch; faz os itens ocuparem todo espaço do eixo segundario*/
-          
+            align-items: stretch; /*Alinha no eixo segundario*/
+            /*align-itens: stretch; faz os itens ocuparem todo espaço do eixo segundario*/      
         }
         div.chield{
-            width: 100px;
-            height: 100px;
+            width: 400px;
             margin: 5px;
-            background-color: rgb(109, 58, 130);
-            flex-grow: 1; /*o tamanho dos itens ocupa todo espaco disponivel*/
+            background-color: rgb(166, 82, 199);
+            order: 2; /*define a ordem que aparecera a div*/
         }
-        
+        #badguy{
+            flex-shrink: 4; /*vai diminuir 4 vezes mais do que a outra div*/
+            order: 1; /*define a ordem que aparecera a div*/
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="chield"></div>
-        <div class="chield"></div>
-        <div class="chield"></div>
-        <div class="chield"></div>
+        <div class="chield" id="badguy2"><strong>Bloco 1</strong></div>
+        <div class="chield" id="badguy"><strong>Bloco 2</strong></div>
     </div>
 </body>
 </html>
